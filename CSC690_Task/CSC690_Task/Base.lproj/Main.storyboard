@@ -40,11 +40,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rac-OK-fsu" secondAttribute="trailing" id="vXL-J0-3Lc"/>
                         </constraints>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="6JH-xa-oOf"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="3ng-xt-gKz">
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="hGd-Z9-cm1"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="hGd-Z9-cm1">
+                            <connections>
+                                <action selector="didTapAdd" destination="BYZ-38-t0r" id="Ooo-rE-87X"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -55,25 +57,44 @@
             </objects>
             <point key="canvasLocation" x="328.98550724637681" y="92.410714285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Entry View Controller-->
         <scene sceneID="3l0-WB-y3C">
             <objects>
-                <viewController id="xc9-7I-vyF" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GZ8-DF-kkv">
+                <viewController storyboardIdentifier="entry" id="xc9-7I-vyF" customClass="EntryViewController" customModule="CSC690_Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GZ8-DF-kkv" customClass="Entry" customModule="CSC690_Task" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hcQ-dm-2Qk">
+                                <rect key="frame" x="20" y="64" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="m2H-ue-Wpc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="bRz-N1-ivw"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hcQ-dm-2Qk" firstAttribute="top" secondItem="bRz-N1-ivw" secondAttribute="top" constant="20" id="0Jt-97-90B"/>
+                            <constraint firstItem="bRz-N1-ivw" firstAttribute="trailing" secondItem="hcQ-dm-2Qk" secondAttribute="trailing" constant="20" id="baW-B7-VRk"/>
+                            <constraint firstItem="bRz-N1-ivw" firstAttribute="bottom" secondItem="hcQ-dm-2Qk" secondAttribute="bottom" constant="703" id="nZ2-WW-Rxl"/>
+                            <constraint firstItem="hcQ-dm-2Qk" firstAttribute="leading" secondItem="bRz-N1-ivw" secondAttribute="leading" constant="20" id="rfI-iI-FN2"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="field" destination="hcQ-dm-2Qk" id="LWU-GT-k0t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0xg-9S-saM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="345" y="748"/>
         </scene>
-        <!--View Controller-->
+        <!--Task View Controller-->
         <scene sceneID="Ryr-mw-vtT">
             <objects>
-                <viewController id="ytx-Gd-ZOl" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="task" id="ytx-Gd-ZOl" customClass="TaskViewController" customModule="CSC690_Task" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XST-eF-pg8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
