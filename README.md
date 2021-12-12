@@ -11,3 +11,5 @@ the Feature are
 - mark impotant
 - due date and remainder. 
 by using coredata.
+
+source: https://iosexample.com/basic-todo-list-application-built-using-the-new-swiftui-framework-and-core-data/
